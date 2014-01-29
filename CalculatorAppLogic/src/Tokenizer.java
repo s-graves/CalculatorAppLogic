@@ -26,7 +26,8 @@ public class Tokenizer {
 				}
 				else
 				{
-					tokens.add(str);
+					if(!str.equals(""))
+						tokens.add(str);
 					str = "";
 					str += mathString.charAt(i);
 					type = "number";
@@ -41,7 +42,8 @@ public class Tokenizer {
 				}
 				else
 				{
-					tokens.add(str);
+					if(!str.equals(""))
+						tokens.add(str);
 					str = "";
 					str += mathString.charAt(i);
 					type = "letter";
